@@ -1,0 +1,46 @@
+ <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="stylesheet.css">
+        <link href="https://fonts.googleapis.com/css2?family=Poiret+One&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Lato:400,700|Noto+Sans+JP:400,700" rel="stylesheet">
+        <title>和暦計算ツール</title>
+    </head>
+    <body>
+            <div id="app"class="container">
+                 <div class="calendar-wrapper">
+                    <div id="meiji" class= "calendar"><span class="year-style">明治{{year - 1867}}年</span></div>
+                    <div id="taisho" class="calendar"><span class="year-style">大正{{year - 1911}}年</span></div>
+                    <div id="showa" class="calendar"><span class="year-style">昭和{{year - 1925}}年</span></div>
+                    <div id="heisei" class="calendar"><span class="year-style">平成{{year - 1988}}年</span></div>
+                    <div id="reiwa" class="calendar"><span class="year-style">令和{{year - 2018}}年</span></div>
+                 </div>
+                 <div class="counter">
+                     <div class="animation">
+                        <p　class="counter-word">西暦を入力</p>
+                     </div>   
+                        <p class="input-word"><input type="number"　name="year" id="year" v-model="year">年</p>
+                </div>
+            </div>
+            <div id="tool">
+                <p>和暦計算ツール</p>
+            </div> 
+            <script src="https://cdn.jsdelivr.net/npm/vue@2.6.11"></script>
+            <script>
+                var app = new Vue({
+                    el:"#app",
+                    data:{
+                        year:2020
+                    }
+                })
+            </script>
+            <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+            <script>
+                setTimeout(function(){
+                    jQuery('.counter-word').fadeIn('2000');
+                },1500);
+            </script>
+    </body>
+</html>

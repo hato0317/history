@@ -1,0 +1,150 @@
+@charset "UTF-8";
+* {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Poiret One', cursive;
+  background-color: #c083d4;
+}
+
+.container .counter {
+  text-align: center;
+  position: absolute;
+  top: 40%;
+  left: 46%;
+}
+
+.container .counter .animation {
+  border-radius: 10px;
+  width: 92px;
+  height: 20px;
+  background: rgba(66, 66, 66, 0.5);
+  -webkit-animation-name: anime;
+          animation-name: anime;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+}
+
+@-webkit-keyframes anime {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 92px;
+  }
+}
+
+@keyframes anime {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 92px;
+  }
+}
+
+.container .counter .counter-word {
+  font-size: 14px;
+  color: white;
+  display: none;
+}
+
+.container .counter p {
+  font-size: 24px;
+}
+
+.container .counter input {
+  text-align: center;
+  width: 90px;
+  font-size: 24px;
+  margin-right: 5px;
+}
+
+.container .calendar-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: relative;
+}
+
+.container .calendar-wrapper .calendar {
+  width: 100%;
+  height: 700px;
+  background-size: cover;
+  background-position: center;
+}
+
+.container .calendar-wrapper .year-style {
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 24px;
+  color: white;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 100%;
+}
+
+.container .calendar-wrapper #meiji {
+  background-image: url("https://publicdomainq.net/images/201802/24s/publicdomainq-0019276aic.jpg");
+}
+
+.container .calendar-wrapper #taisho {
+  background-image: url("https://publicdomainq.net/images/201811/19s/publicdomainq-0028531czv.jpg");
+}
+
+.container .calendar-wrapper #showa {
+  background-image: url("https://publicdomainq.net/images/202005/19s/publicdomainq-0045399csg.jpg");
+}
+
+.container .calendar-wrapper #heisei {
+  background-image: url("https://publicdomainq.net/images/201811/26s/publicdomainq-0028773ymx.jpg");
+}
+
+.container .calendar-wrapper #reiwa {
+  background-image: url("https://publicdomainq.net/images/201801/03s/publicdomainq-0017453bxg.jpg");
+}
+
+#tool {
+  font-size: 26px;
+  border-bottom: 1px solid white;
+  width: 20%;
+  color: white;
+  font-family: 'Lato', 'Noto Sans JP', 'ヒラギノ角ゴ ProN', 'Hiragino Kaku Gothic ProN', 'メイリオ', Meiryo, 'ＭＳ Ｐゴシック', 'MS PGothic', sans-serif;
+  margin: 20px 0 0 20px;
+}
+
+#tool p {
+  margin-bottom: 5px;
+}
+
+@media screen and (max-width: 480px) {
+  /*　画面サイズが480pxからはここを読み込む　*/
+  .input-word {
+    font-size: 16px !important;
+  }
+  input {
+    width: 60px;
+  }
+  .counter {
+    top: 40% !important;
+    left: 37% !important;
+  }
+  #tool {
+    width: 50%;
+  }
+}
+/*# sourceMappingURL=stylesheet.css.map */
